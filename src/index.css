@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+/* Configuração Base Segura */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #F8F9FA;
+  color: #212529;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* --- UTILITÁRIOS CUSTOMIZADOS --- */
+
+/* Esconder Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Padrão de Grelha (Grid Pattern) para o Studio */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(217, 72, 15, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(217, 72, 15, 0.05) 1px, transparent 1px);
+}
+
+/* Efeito de Luz de Estúdio */
+.studio-spotlight {
+  background: radial-gradient(circle at center, rgba(217, 72, 15, 0.05) 0%, rgba(248, 249, 250, 0) 70%);
+}
+
+/* Animação de Shimmer */
+@keyframes shimmer {
+  0% { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(200%) skewX(-12deg); }
+}
+
+/* Borda ZigZag para o Recibo */
+.zigzag-border {
+  background: linear-gradient(-45deg, transparent 16px, white 16px, white 18px, transparent 18px),
+              linear-gradient(45deg, transparent 16px, white 16px, white 18px, transparent 18px);
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 24px 32px;
+  height: 32px;
+  width: 100%;
+}
